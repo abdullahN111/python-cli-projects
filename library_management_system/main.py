@@ -32,14 +32,14 @@ class LMS:
         
         if book_id in self.books_dict.keys():
             if not self.books_dict[book_id]["status"] == "Available":
-                print(f"This book is already issued to {self.books_dict[book_id]["lender_name"]} on {self.books_dict[book_id]["issue_date"]}")
+                print(f"This book is already issued to {self.books_dict[book_id]["lender_name"]} on {self.books_dict[book_id]["issue_date"]}.\n")
                 return self.issue_books()
             elif self.books_dict[book_id]["status"] == "Available":
                 your_name = input("Enter your name: ")
                 self.books_dict[book_id]["lender_name"] = your_name
                 self.books_dict[book_id]["issue_date"] = current_date
                 self.books_dict[book_id]["status"] = "Already Issued"
-                print("Book issued successfully. \n")
+                print("Book issued successfully.\n")
             
         else:
             print("Book ID not found!")
@@ -80,12 +80,14 @@ if __name__ == "__main__":
         mylms = LMS("list_of_books.txt", "Python's")
         press_key_list = {"1": "Display Books", "2": "Issue Books", "3": "Add Books", "4": "Return Books", "5": "Quit"}    
         
+        print(f"\n----------Welcome To {mylms.library_name} Library Management System---------")
+            
         key_press = ""
         while not (key_press == "5"):
-            print(f"\n----------Welcome To {mylms.library_name}'s Library Management System---------\n")
+            print("\n---------------------\n")
             for key, value in press_key_list.items():
                 print("Press", key, "To", value)
-            key_press = input("Press Key : ")
+            key_press = input("\nPress Key : ")
             if key_press == "1":
                 print("\nCurrent Selection : DISPLAY BOOKS \n")
                 mylms.display_books()
