@@ -1,54 +1,84 @@
 
+acc_data: list = [
+    {
+        "username": "abdullah",
+        "pin": 1111,
+        "balance": 100000
+    },
+    {
+        "username": "uzair",
+        "pin": 2222,
+        "balance": 80000
+    },
+    {
+        "username": "sufyan",
+        "pin": 3333,
+        "balance": 60000
+    },
+]
 
-my_balance = 1000000
-my_pin = 1122
+options = ["Withdraw Money", "Check Balance", "Exit"]
 
-print("\n---Welcome to Demo Bank ATM---\n")
 
-while True:
-    try:
-        pin = int(input("Enter your 4-digit PIN: "))
-    except ValueError:
-        print("\nInvalid input! Please enter numbers only.\n")
-        continue
-
-    if pin != my_pin:
-        print("\nInvalid PIN!\n")
-        continue
-
+def action(balance: int) -> None:
+    print("\nSelect an option or press 3 to quit\n")
+    for index, option in enumerate(options):
+        print(f"{index+1}. {option}")
+    while True:
+        action: str = input("\nWhat do you want to do? 1 for withdraw, 2 for balance, 3 for exit: ").lower()
+    
+        if action == "1":
+            try:
+                amount: int = int(input("Enter amount to withdraw: "))
+                
+            except Exception as e:
+                print(f"Error {e}")
+                
+            if amount <= balance:
+                balance -= amount
+                print(f"\nYou have withdrawed {amount} successfully. Your remaining balance is {balance}.")
+                continue
             
-    print("\nWhat do you want to do? Type withdraw(w) or balance(b)")
-    options = input("Withdraw Cash or Check Balance: ").lower()
-        
-    if options == "withdraw" or options == "w":    
-        try:
-            amount = int(input("\nEnter amount to withdraw: "))
-            if amount > 0 and amount <= my_balance:
-                my_balance -= amount
-                print(f"\n{amount} withdraw successfully.")
-                print(f"Your remaining balance is {my_balance}\n")
             else:
-                print("\nInvalid amount! Check your balance or enter a valid number.\n")
-        except ValueError:
-                    print("\nInvalid input! Please enter numbers only.\n")
-        if options == "balance" or options == "b":
-            my_balance = my_balance
-            print(f"\nYou Have ${my_balance} in your account.")
-    
-    elif options == "balance" or options == "b":
-        print(f"\nYou Have ${my_balance} in your account.")
-
-    else:
-        print("\nInvalid option! Please choose again.\n")
-        continue
-    
-    choice = input("\nDo you want to continue? Type 'quit' to exit or Press Enter to continue: ").lower()
-    if choice == "quit":
-        print("\nThank you for using Demo Bank ATM. Have a nice day!\n")
-        break
-    if choice == "":
-        continue
-
-    break
+                print("\nInsufficient balance!")
+                continue
         
+        elif action == "2":
+            print(f"\nYour balance is {balance}")
+            
+        elif action == "3":
+            print("\n---Thanks for using Demo ATM---")
+            exit()
+            
+        else:
+            print("\nInvalid input!")
 
+
+def main() -> None:
+    print("\n---Welcome to Demo Bank ATM---")
+    while True:
+        try:
+            user: str = input("\nPlease enter your username: ").lower()
+                    
+        except Exception as e:
+            print("Error: ", e)
+            
+        try:
+            pin: int = int(input("Please enter your 4-digit pin: "))
+            
+        except:
+            print("\nPin should only contain digits!")
+            continue
+        
+        for account in acc_data:
+            
+            if user == account["username"] and pin == account["pin"]:
+                    print(f"\nWelcome {account["username"].upper()}")
+                    action(account["balance"])
+                    break
+        else:
+            print("\nInvalid username or pin!")
+            
+            
+        
+main()
