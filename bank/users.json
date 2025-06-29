@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Abdullah",
+        "pin": 1111,
+        "balance": 100000
+    },
+    {
+        "name": "Rohan",
+        "pin": 2222,
+        "balance": 20000
+    },
+    {
+        "name": "Uzair",
+        "pin": 3333,
+        "balance": 80000
+    },
+    {
+        "name": "Sufyan",
+        "pin": 4444,
+        "balance": 60000
+    }
+]
