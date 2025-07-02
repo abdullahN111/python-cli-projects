@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Chicken Biryani",
+    "price": 350
+  },
+  {
+    "id": 2,
+    "name": "Beef Seekh Kebab",
+    "price": 300
+  },
+  {
+    "id": 3,
+    "name": "Chicken Malai Boti",
+    "price": 400
+  },
+  {
+    "id": 4,
+    "name": "Zinger Burger",
+    "price": 450
+  },
+  {
+    "id": 5,
+    "name": "Chicken Shawarma",
+    "price": 200
+  },
+  {
+    "id": 6,
+    "name": "French Fries",
+    "price": 150
+  },
+  {
+    "id": 7,
+    "name": "Raita",
+    "price": 50
+  },
+  {
+    "id": 8,
+    "name": "Mint Chutney",
+    "price": 30
+  },
+  {
+    "id": 9,
+    "name": "Garlic Sauce",
+    "price": 40
+  },
+  {
+    "id": 10,
+    "name": "Mineral Water (Small)",
+    "price": 50
+  },
+  {
+    "id": 11,
+    "name": "Mineral Water (Large)",
+    "price": 90
+  },
+  {
+    "id": 12,
+    "name": "Cold Drink (Can)",
+    "price": 70
+  },
+  {
+    "id": 13,
+    "name": "Cold Drink (Bottle)",
+    "price": 100
+  },
+  {
+    "id": 14,
+    "name": "Cold Drink (Can)",
+    "price": 70
+  },
+  {
+    "id": 15,
+    "name": "Mutton Karahi",
+    "price": 800
+  },
+  {
+    "id": 16,
+    "name": "Beef Nihari",
+    "price": 600
+  },
+  {
+    "id": 17,
+    "name": "Chicken Tikka (Leg)",
+    "price": 250
+  },
+  {
+    "id": 18,
+    "name": "Beef Bihari Boti",
+    "price": 350
+  },
+  {
+    "id": 19,
+    "name": "Chapli Kebab",
+    "price": 200
+  },
+  {
+    "id": 20,
+    "name": "Aloo Samosa (2 pcs)",
+    "price": 60
+  },
+  {
+    "id": 21,
+    "name": "Dahi Bhallay",
+    "price": 120
+  },
+  {
+    "id": 22,
+    "name": "Green Chutney",
+    "price": 25
+  },
+  {
+    "id": 23,
+    "name": "Imli Sauce",
+    "price": 30
+  },
+  {
+    "id": 24,
+    "name": "Club Sandwich",
+    "price": 320
+  },
+  {
+    "id": 25,
+    "name": "Chicken Roll Paratha",
+    "price": 180
+  },
+  {
+    "id": 26,
+    "name": "Mineral Water (Glass)",
+    "price": 20
+  },
+  {
+    "id": 27,
+    "name": "Cold Drink (Glass)",
+    "price": 40
+  },
+  {
+    "id": 28,
+    "name": "Shami Kebab",
+    "price": 100
+  },
+  {
+    "id": 29,
+    "name": "Beef Kofta",
+    "price": 180
+  },
+  {
+    "id": 30,
+    "name": "Plain Naan",
+    "price": 25
+  }
+]
